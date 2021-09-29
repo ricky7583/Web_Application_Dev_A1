@@ -1,0 +1,51 @@
+/*
+Filename : navigation.css
+Student name : Sungmin Lee
+StudentID : 301136725
+Date : Sep 29, 2021
+*/
+
+body {  
+height: 125vh;  
+margin-top: 80px;  
+padding: 30px;  
+background-size: cover;  
+font-family: Arial, Helvetica, sans-serif;  
+}  
+
+header {  
+background-color: grey;  
+position: fixed;  
+left: 0;  
+right: 0;  
+top: 25px;  
+height: 70px;  
+display:flex;  
+align-items: center;  
+}  
+
+header * {  
+    display: inline; 
+}  
+
+header li {  
+margin: 119px;  
+}  
+
+header li a {  
+color: white;  
+text-decoration: none;  
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+em{
+    font-size: 18px;
+}
+h2{
+    font: 14px;
+}
+a{
+    text-decoration: none;
+}
