@@ -1,4 +1,12 @@
-<nav class="navigation_bar">
+  <!-- Main Navigation -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">COMP229 Assignment 1</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
 
@@ -7,15 +15,15 @@
           <% } else { %>
         <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="../public/content/Home_Page"> HomePage</a>
+          <a class="nav-link" href="/Home_Page"><i class="fas fa-lg fa-laptop-house"></i> Home</a>
         </li>
 
-        <% if (title == "About Me"){ %>
+        <% if (title == "About"){ %>
         <li class="nav-item active">
           <% } else { %>
         <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="../public/content/About_Me.html"> About Me</a>
+          <a class="nav-link" href="/About_Me"><i class="fas fa-info-circle"></i> About</a>
         </li>
 
         <% if (title == "Projects"){ %>
@@ -23,7 +31,7 @@
           <% } else { %>
         <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="../public/content/Projects_Page.html"> Projects</a>
+          <a class="nav-link" href="/Projects_Page"><i class="fab fa-elementor"></i> Projects</a>
         </li>
 
         <% if (title == "Services"){ %>
@@ -31,17 +39,15 @@
           <% } else { %>
         <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="../public/content/Services_Page.html"> Services</a>
+          <a class="nav-link" href="/Services_Page"><i class="fas fa-cogs"></i> Services</a>
         </li>
 
-        <% if (title == "Contact Me"){ %>
+        <% if (title == "Contact Us"){ %>
         <li class="nav-item active">
           <% } else { %>
         <li class="nav-item">
           <% } %>
-          <a class="nav-link" href="../public/content/Contact_Me.html"> Contact</a>
+          <a class="nav-link" href="/Contact_Me"><i class="fas fa-mobile-alt"></i> Contact Me</a>
         </li>
-
-
     </div>
-</nav>
+  </nav>

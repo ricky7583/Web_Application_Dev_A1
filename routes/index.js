@@ -9,30 +9,38 @@ router.get('/', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/Home_Page', function(req, res, next) {
+router.get('/home', function(req, res, next) {
   res.render('index', { 
     title: 'Home'
   });
 });
 
-router.get('/About_Me', function(req, res, next) {
+/* GET About page. */
+router.get('/about', function(req, res, next) {
   res.render('index', { 
-    title: 'About'
+    title: 'About Me'
   });
 });
-router.get('/Projects_Page', function(req, res, next) {
+
+/* GET Products page. */
+router.get('/projects', function(req, res, next) {
   res.render('index', { 
     title: 'Projects'
   });
 });
-router.get('/Services_Page', function(req, res, next) {
+
+/* GET Services page. */
+router.get('/services', function(req, res, next) {
   res.render('index', { 
     title: 'Services'
   });
 });
-router.get('/Contact_Me', function(req, res, next) {
+
+/* GET Contact Us page. */
+router.get('/contact', function(req, res, next) {
   res.render('index', { 
-    title: 'Contact'
+    title: 'Contact Me'
   });
 });
+
 module.exports = router;

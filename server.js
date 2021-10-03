@@ -1,8 +1,11 @@
+/**
+ * Module dependencies.
+ */
 
 var app = require('./app');
+var debug = require('debug')('02-the-express-generator-end:server');
 var http = require('http');
-const { ESRCH } = require('constants');
-const { router } = require('./app');
+
 
 /**
  * Get port from environment and store in Express.
@@ -45,21 +48,10 @@ function normalizePort(val) {
   return false;
 }
 
-//Set the view engine to ejs
-app.set('view engine', ejs);
-//home page ejs profile
-router.get('/', function(req, res){
-  res.render('public/content/Home_Page');
-});
-
-//contact me ejs profile
-router.get('/', function(req, res){
-  res.render('public/content/Contact_Me');
-});
-
 /**
  * Event listener for HTTP server "error" event.
  */
+
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
