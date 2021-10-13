@@ -5,6 +5,7 @@
 var app = require('./app');
 var debug = require('debug')('02-the-express-generator-end:server');
 var http = require('http');
+const { fstat } = require('fs');
 
 
 /**
@@ -32,6 +33,7 @@ server.on('listening', onListening);
  * Normalize a port into a number, string, or false.
  */
 
+
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -47,6 +49,7 @@ function normalizePort(val) {
 
   return false;
 }
+
 
 /**
  * Event listener for HTTP server "error" event.
