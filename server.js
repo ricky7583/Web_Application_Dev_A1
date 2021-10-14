@@ -5,8 +5,6 @@
 var app = require('./app');
 var debug = require('debug')('02-the-express-generator-end:server');
 var http = require('http');
-const { fstat } = require('fs');
-
 
 /**
  * Get port from environment and store in Express.
