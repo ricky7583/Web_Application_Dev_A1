@@ -17,4 +17,6 @@ Date : Sep 29, 2021
 
 function mySubmission(){
     document.getElementById("Form").submit();
+    alert("Thank you for submission!");
+    window.location.replace(title == "Home");
 }

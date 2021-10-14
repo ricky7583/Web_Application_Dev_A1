@@ -1,13 +1,19 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
 <%- include partials/header.ejs %>
-
+</head>
+<body>
+<script src = "/jquery/dist/jquery.min.js"></script>
+<script src = "bootstrap/dist/js/bootstrap.min.js"></script>
 <%- include partials/content.ejs %>
 
   <main class="container">
     
-    <% if (title == "Home_Page"){ %>
+    <% if (title == "Home"){ %>
     <%- include partials/Home_Page.ejs %>
     <% } %>
-    <% if (title == "About_Me"){ %>
+    <% if (title == "About"){ %>
     <%- include partials/About_Me.ejs %>
     <% } %>
     <% if (title == "Projects"){ %>
@@ -21,7 +27,7 @@
     <% } %>
 
   </main>
-
+</body>
 <%- include partials/footer.ejs %>
 
 

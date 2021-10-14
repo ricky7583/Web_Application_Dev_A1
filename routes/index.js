@@ -18,7 +18,7 @@ router.get('/home', function(req, res, next) {
 /* GET About page. */
 router.get('/about', function(req, res, next) {
   res.render('index', { 
-    title: 'About Me'
+    title: 'About'
   });
 });
 
@@ -39,7 +39,7 @@ router.get('/services', function(req, res, next) {
 /* GET Contact Us page. */
 router.get('/contact', function(req, res, next) {
   res.render('index', { 
-    title: 'Contact Me'
+    title: 'Contact'
   });
 });
 
