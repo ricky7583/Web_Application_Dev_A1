@@ -16,7 +16,7 @@ module.exports.displayAboutPage = (req, res, next) => {
 }
 
 module.exports.displayProjectPage = (req, res, next) => {
-    res.render('index', {title: 'Project'});
+    res.render('index', {title: 'Projects'});
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
@@ -33,7 +33,7 @@ module.exports.displayLoginPage = (req, res, next) => {
         res.render('auth/login', {
             title: "Login",
             messages: req.flash('loginMessage'),
-            nickName: req.user ? req.user.nickName : ''
+            displayName: req.user ? req.user.displayName : ''
         })
     }
     else {
@@ -71,7 +71,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
         res.render('auth/register', {
             title: "Register",
             messages: req.flash('registerMessage'),
-            nickName: req.user ? req.user.nickName : ''
+            displayName: req.user ? req.user.displayName : ''
         });
     }
     else {
@@ -83,9 +83,9 @@ module.exports.processRegisterPage = (req, res, next) => {
     // instantiate a user object
     let newUser = new User({
         username: req.body.username,
-        //password: req.body.password,
+        //password: req.body.password
         email: req.body.email,
-        nickname: req.body.nickname
+        displayName: req.body.displayName
     })
 
     User.register(newUser, req.body.password, (err) => {
@@ -98,7 +98,7 @@ module.exports.processRegisterPage = (req, res, next) => {
             return res.render('auth/register', {
                 title: "Register",
                 messages: req.flash('registerMessage'),
-                nickName: req.user ? req.user.nickName : ''
+                displayName: req.user ? req.user.displayName : ''
             });
         } else {
             // if no error exists, then  registration is successful

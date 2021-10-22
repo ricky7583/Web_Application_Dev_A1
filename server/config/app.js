@@ -11,9 +11,11 @@ let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash');
 
+// database setup
 let mongoose = require('mongoose');
 let DB = require('./db');
 
+//point mongoose to the db uri
 mongoose.connect(DB.URI, {useNewUrlParser: true, useUnifiedTopology: true});
 
 let mongoDB = mongoose.connection;
