@@ -1,11 +1,13 @@
 /*
-Filename : navigation.css
+Filename : app.css
 Student name : Sungmin Lee
 StudentID : 301136725
-Date : Sep 29, 2021
+Date : Oct 22, 2021
 */
 
+
 body {  
+    background-color:#D1FFEF;
 height: 125vh;  
 margin-top: 80px;  
 padding: 30px;  

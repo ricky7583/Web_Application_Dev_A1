@@ -2,7 +2,7 @@
 Filename : navigation.css
 Student name : Sungmin Lee
 StudentID : 301136725
-Date : Sep 29, 2021
+Date : Oct 22, 2021
 */
 
 (function(){

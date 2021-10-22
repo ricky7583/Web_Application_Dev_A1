@@ -5,7 +5,7 @@
 <main class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1><%= title %></h1>
+            <h1>List of contacts</h1>
             <a href="/contact-list/add" class="btn btn-primary" role="button">
                 <i class="fas fa-plus-circle"></i> Add a contact information
             </a>
@@ -28,7 +28,7 @@
                         <td class="text-center col-2"><%= ContactList[count].contactnum %></td>
                         <td class="text-center col-4"><%= ContactList[count].email %></td>
                         <td class="text-center col-2">
-                            <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary">
+                            <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-info">
                                 <i class="fas fa-pencil-alt"></i> Edit</a>
                         </td>
                         <td class="text-center col-2">
