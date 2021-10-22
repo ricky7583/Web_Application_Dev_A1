@@ -16,6 +16,8 @@
                     <th class="text-center col-2">Contact Name</th>
                     <th class="text-center col-2">Contact Number</th>
                     <th class="text-center col-4">Email Address</th>
+                    <th class="text-center col-2">Edit Information</th>
+                    <th class="text-center col-2">Delete Information</th>
                 </tr>
 
                 <!-- Repeatable Template Row -->
@@ -24,12 +26,12 @@
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= ContactList[count].name %></td>
                         <td class="text-center col-2"><%= ContactList[count].contactnum %></td>
-                        <td class="text-center col-1"><%= ContactList[count].email %></td>
-                        <td class="text-center col-1">
+                        <td class="text-center col-4"><%= ContactList[count].email %></td>
+                        <td class="text-center col-2">
                             <a href="/contact-list/edit/<%= ContactList[count]._id %>" class="btn btn-primary">
                                 <i class="fas fa-pencil-alt"></i> Edit</a>
                         </td>
-                        <td class="text-center col-1">
+                        <td class="text-center col-2">
                             <a href="/contact-list/delete/<%= ContactList[count]._id %>" class="btn btn-danger">
                                 <i class="fas fa-trash-alt"></i> Delete</a>
                         </td>
