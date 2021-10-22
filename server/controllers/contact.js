@@ -10,12 +10,10 @@ module.exports.displayContactList = (req, res, next) => {
         if (err) {
             return console.error(err);
         } else {
-            //console.log(ContactList);
-
+            console.log(contactList);
             res.render('contact/list', {title: 'Contacts', ContactList : contactList});
         }
-    });
-
+    }).sort({name: 1});
 };
 
 module.exports.displayAddPage = (req, res, next) => {
@@ -52,6 +50,7 @@ module.exports.displayEditPage =  (req, res, next) => {
             res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit})
         }
     })
+
 }
 
 module.exports.processEditPage =  (req, res, next) => {
@@ -88,4 +87,17 @@ module.exports.performDelete =  (req, res, next) => {
             res.redirect('/contact-list');
         }
     });
+}
+
+
+
+
+function DisplayAllContacts(req, res, next) {
+    business_contact_1.default.find(function (err, businessContacts) {
+        if (err) {
+            return console.error(err);
+        }
+        console.log(businessContacts);
+        res.render('index', { title: 'Business', page: 'business', contacts: businessContacts, display: util_1.GetDisplayName(req) });
+    }).sort({ lastname: 1, firstname: 1 });
 }
